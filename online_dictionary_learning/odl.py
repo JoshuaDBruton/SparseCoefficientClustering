@@ -29,6 +29,7 @@ class Dict:
 		self.regTerm = None
 		self.max_iter = None
 		self.prog = None
+
 	# Outputs a the learnt dictionary
 	def showDict(self):
 		self.atoms=self.atoms.transpose()
@@ -43,7 +44,7 @@ class Dict:
 				ax[i][j].imshow(new_tiles[count],cmap="gray")
 				ax[i][j].axis("off")
 				count+=1
-		plt.show()
+		plt.savefig('dictionary/display.png')
 		self.atoms=self.atoms.transpose()
 
 	# Returns the dictionary as array of atoms, the most recently saved one
@@ -57,7 +58,8 @@ class Dict:
 			self.coefs[i] = omp.omp(self.atoms, self.signals[i], self.regTerm)
 			if self.prog:
 				if i+1<self.signals.shape[0]:
-					print('[' + str(i+1) + '] ' + str(np.round(((i+1)/self.signals.shape[0])*100,2)) + '%', end='\r')
+					if (i+1)%100==0:
+						print('[' + str(i+1) + '] ' + str(np.round(((i+1)/self.signals.shape[0])*100,2)) + '%', end='\r')
 				else:
 					print('[' + str(i+1) + '] ' + str(np.round(((i+1)/self.signals.shape[0])*100,2)) + '%', end='\n')
 		return self.coefs
@@ -78,8 +80,8 @@ class Dict:
 		return self.signals[rand]
 
 	# Gets a single coefficient (from OMP implementation)
-	def get_co(self, signal):
-		return omp.omp(self.atoms, signal, self.regTerm)
+	def get_co(self, signal, eps=None):
+		return omp.omp(self.atoms, signal, self.regTerm, eps=eps)
 
 	# Initialises dictionary to random signals from data
 	def initialDict(self):
@@ -95,7 +97,7 @@ class Dict:
 			print('[{0}] {1}%'.format((curr_it+1), np.round(((curr_it+1)/self.max_iter)*100,2)), end='\n')
 
 	# Trains
-	def fit(self, signals, reg_term=100, max_iter=100, showDictionary=False, showRecExample=False, prog=False, comet=None, logRep=False, save=False, label='Dictionary'):
+	def fit(self, signals, reg_term=100, max_iter=100, showDictionary=False, prog=False, save=False, label='dictionary/example_dictionary', eps=None):
 		# Initialisation
 		self.orig = signals
 		self.regTerm=reg_term
@@ -109,26 +111,16 @@ class Dict:
 		B = np.zeros((self.signals.shape[1], self.num_coms))
 		for t in range(1,max_iter):
 			signal = self.drawRand()
-			alpha = self.get_co(signal)
+			alpha = self.get_co(signal, eps=eps)
 			A += (alpha.dot(alpha.T))
 			B += (signal[:, None]*alpha[None,:])
 			self.atoms = updateDict(self.atoms, A, B)
-			if prog==True:
-				self.update_progress(t)
-			if logRep:
-				if t%100==0:
-					comet.log_metric('Representation error', self.showError(), step=t)
+			if prog:
+				if (t+1)%100==0:
+					self.update_progress(t)
+
 		if save:
 			np.save('%s.npy' %label, self.atoms)
-			if logRep:
-				comet.log_asset('%s.npy' %label)
 
-		if showRecExample == True:
-			alpha = omp.omp(self.atoms, signal, reg_term)
-			plt.plot(signal, '-g', label='Original')
-			plt.plot((self.atoms.dot(alpha)), ':b', label='Reconstruction')
-			plt.legend()
-			plt.show()
-
-		if showDictionary==True:
+		if showDictionary:
 			self.showDict()

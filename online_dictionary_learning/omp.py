@@ -9,7 +9,6 @@ Adapted from:
 import numpy as np
 from numpy import linalg
 from copy import deepcopy
-import spams
 
 # This version does not target specific sparsity levels
 def orthogonal_mp(D, x, L=100):
