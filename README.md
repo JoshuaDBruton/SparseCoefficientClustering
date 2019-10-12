@@ -7,7 +7,7 @@ Supervised by: Dr. Hairong Wang
 ## Usage
 I have created a pipenv with a lockfile so just download and use   
 ~~~
-pipenv shell
+pipenv install
 ~~~
 and requirements should be met. Then just run:
 ~~~
