@@ -1,6 +1,7 @@
 # Dictionary Learning for Clustering on Hyperspectral Images
 ## Details
-Framework for Spectral Clustering on the Sparse Coefficients of Learned Dictionaries for Computer Science Honours' project at the University of the Witwatersrand.  
+Framework for Spectral Clustering on the Sparse Coefficients of Learned Dictionaries. This framework was created as a part of the project I presented for completion of my Computer Science Honours' degree at the University of the Witwatersrand.  
+  
 Authored by: Joshua Bruton  
 Supervised by: Dr. Hairong Wang
 ## Usage
