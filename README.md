@@ -26,7 +26,7 @@ python demonstration.py
 ~~~
 and the demonstration should run. It will train a dictionary and then use it for spectral clustering as discussed in the paper (yet to be released).
 ## Previous work
-One working discriminative dictionary has been provided in the repository, all of the others are available as assets on Comet.ml (https://www.comet.ml/joshuabruton/honours-project/view/). They were all trained using the implementation of ODL provided in this repository. Bare in mind that dictionary learning is extremely sensitive to the initialisation of the dictionary; results for different dictionaries will vary drastically.  
+One working discriminative dictionary has been provided in the repository, all of the others are available as assets on [Comet.ml](https://www.comet.ml/joshuabruton/honours-project/view/). They were all trained using the implementation of ODL provided in this repository. Bare in mind that dictionary learning is extremely sensitive to the initialisation of the dictionary; results for different dictionaries will vary drastically.  
   
 [scikit-learn](https://scikit-learn.org/stable/) was used extensively throughout this project for more stable implementations. Thanks also go to [Dave Biagioni](https://github.com/davebiagioni/pyomp/blob/master/omp.py), [mitscha](https://github.com/mitscha/ssc_mps_py/blob/master/matchingpursuit.py), and the authors of [this article](https://dl.acm.org/citation.cfm?id=1553463).
   
