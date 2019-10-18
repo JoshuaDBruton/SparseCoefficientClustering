@@ -30,7 +30,7 @@ One working discriminative dictionary has been provided in the repository, all o
   
 [scikit-learn](https://scikit-learn.org/stable/) was used extensively throughout this project for more stable implementations. Thanks also go to [Dave Biagioni](https://github.com/davebiagioni/pyomp/blob/master/omp.py), [mitscha](https://github.com/mitscha/ssc_mps_py/blob/master/matchingpursuit.py), and the authors of [this article](https://dl.acm.org/citation.cfm?id=1553463).
   
-We compiled a paper discussing the work related to this framework and it will be submitted to a journal for review in early November. We will expand this section after we have been notified of the result.
+We compiled a paper discussing the work related to this framework and it has been submitted to a conference for review. We will expand this section after we have been notified of the result.
 
 ## Future work
 This repository is licensed under the GNU General Public License and therefore is completely free to use for any project you see fit. If you do use or learn from our work, we would appreciate citations where appropriate and once we make the paper available.
