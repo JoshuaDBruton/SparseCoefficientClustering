@@ -11,7 +11,6 @@ This repository contains implementations or usage of the following techniques:
 1. Online Dictionary Learning
 2. Orthogonal Matching Pursuit with dynamic stopping criteria
 3. Spectral Clustering (sk-learn)
-4. Hyperspectral Image processing
 
 The repository also contains the SalinasA hyperspectral image. This and other hyperspectral data sets are available on the Grupo de Inteligencia Computacional website [here](http://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes).
 
