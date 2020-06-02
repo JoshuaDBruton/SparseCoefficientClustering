@@ -15,9 +15,9 @@ This repository contains implementations or usage of the following techniques:
 The repository also contains the SalinasA hyperspectral image. This and other hyperspectral data sets are available on the Grupo de Inteligencia Computacional website [here](http://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes).
 
 ## Usage
-I have created a pipenv with a lockfile so just download and use  
+I have created a requirements file. I recommend using [pipenv](https://pypi.org/project/pipenv/) with Python 3.6 to open a shell and then using
 ~~~
-pipenv install
+pipenv install -r requirements.txt
 ~~~
 and requirements should be met. Then just run:
 ~~~
