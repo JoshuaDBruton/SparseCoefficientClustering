@@ -48,5 +48,7 @@ This repository is licensed under the GNU General Public License and therefore i
 Or:    
 Bruton, J., Wang, H. Dictionary learning for clustering on hyperspectral images. SIViP (2020). https://doi.org/10.1007/s11760-020-01750-z
 
+[The paper can be read for free.](https://rdcu.be/b5Vsq)
+
 ## Suggestions
 If there are any pressing problems with the code please open an issue and I will attend to it as timeously as is possible.
