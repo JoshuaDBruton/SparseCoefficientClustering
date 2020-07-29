@@ -1,7 +1,7 @@
 # Dictionary Learning for Clustering on Hyperspectral Images
 ## Overview
 Framework for Spectral Clustering on the Sparse Coefficients of Learned Dictionaries. This framework was created as a part of the project I presented for completion of my Computer Science Honours' degree at the University of the Witwatersrand.  
-A paper was produced for this research, it was published by Springer's Journal of Signal, Image and Video Processing. The paper can be read for free here: https://rdcu.be/b5Vsq.
+A paper was produced for this research, it was published by Springer's Journal of Signal, Image and Video Processing. The paper can be read for free here: https://rdcu.be/b5Vsq. Please look below for citation details.
 
 Authored by: Joshua Bruton  
 Supervised by: Dr. Hairong Wang
@@ -23,7 +23,7 @@ and requirements should be met. Then just run:
 ~~~
 python demonstration.py
 ~~~
-and the demonstration should run. It will train a dictionary and then use it for spectral clustering as discussed in the paper (yet to be released).
+and the demonstration should run. It will train a dictionary and then use it for spectral clustering as discussed in the paper.
 ## Previous work
 One working discriminative dictionary has been provided in the repository, all of the others are available as assets on [Comet.ml](https://www.comet.ml/joshuabruton/honours-project/view/). They were all trained using the implementation of ODL provided in this repository. Bare in mind that dictionary learning is extremely sensitive to the initialisation of the dictionary; results for different dictionaries will vary drastically.  
   
@@ -32,7 +32,21 @@ One working discriminative dictionary has been provided in the repository, all o
 We compiled a paper discussing the work related to this framework and it has been submitted to a conference for review. We will expand this section after we have been notified of the result.
 
 ## Future work
-This repository is licensed under the GNU General Public License and therefore is completely free to use for any project you see fit. If you do use or learn from our work, we would appreciate citations where appropriate and once we make the paper available.
+This repository is licensed under the GNU General Public License and therefore is completely free to use for any project you see fit. If you do use or learn from our work, we would appreciate if you cited the following details:
+```
+@article{10.1007/s11760-020-01750-z, 
+  author = {Bruton, Joshua and Wang, Hairong}, 
+  title = {{Dictionary learning for clustering on hyperspectral images}}, 
+  issn = {1863-1703}, 
+  doi = {10.1007/s11760-020-01750-z},
+  pages = {1--7}, 
+  journal = {Signal, Image and Video Processing}, 
+  year = {2020}
+}
+
+```
+Or:    
+Bruton, J., Wang, H. Dictionary learning for clustering on hyperspectral images. SIViP (2020). https://doi.org/10.1007/s11760-020-01750-z
 
 ## Suggestions
 If there are any pressing problems with the code please open an issue and I will attend to it as timeously as is possible.
