@@ -1,4 +1,14 @@
 # Dictionary Learning for Clustering on Hyperspectral Images
+
+<div align="center">
+
+[![GitHub issues](https://img.shields.io/github/issues/JoshuaDBruton/SparseCoefficientClustering)](https://github.com/JoshuaDBruton/SparseCoefficientClustering/issues)
+[![GitHub stars](https://img.shields.io/github/stars/JoshuaDBruton/SparseCoefficientClustering)](https://github.com/JoshuaDBruton/SparseCoefficientClustering/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/JoshuaDBruton/SparseCoefficientClustering)](https://github.com/JoshuaDBruton/SparseCoefficientClustering/network)
+[![GitHub license](https://img.shields.io/github/license/JoshuaDBruton/SparseCoefficientClustering)](https://github.com/JoshuaDBruton/SparseCoefficientClustering/blob/master/LICENSE)
+
+</div>
+
 ## Overview
 Framework for Spectral Clustering on the Sparse Coefficients of Learned Dictionaries. This framework was created as a part of the project I presented for completion of my Computer Science Honours' degree at the University of the Witwatersrand.  
 A paper was produced for this research, it was published by Springer's Journal of Signal, Image and Video Processing. The paper can be read for free here: https://rdcu.be/b5Vsq. Please look below for citation details.
